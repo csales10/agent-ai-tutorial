@@ -1,0 +1,226 @@
+[
+  {
+    "TransId": 1001,
+    "TransDate": "2026-03-01",
+    "Memo": "Monthly office rent - March 2026",
+    "Reference": "INV-2026-0301",
+    "CreatedBy": "jmartinez",
+    "PostingTime": "09:15:00",
+    "Lines": [
+      { "AcctCode": "6100", "AcctName": "Rent Expense", "Debit": 8500.00, "Credit": 0.00, "LineMemo": "Office lease - Q101 Building" },
+      { "AcctCode": "1100", "AcctName": "Cash - Operating Account", "Debit": 0.00, "Credit": 8500.00, "LineMemo": "Office lease - Q101 Building" }
+    ]
+  },
+  {
+    "TransId": 1002,
+    "TransDate": "2026-03-02",
+    "Memo": "Purchase of IT equipment",
+    "Reference": "PO-2026-0045",
+    "CreatedBy": "jmartinez",
+    "PostingTime": "10:30:00",
+    "Lines": [
+      { "AcctCode": "1500", "AcctName": "Fixed Assets - Equipment", "Debit": 12350.00, "Credit": 0.00, "LineMemo": "5x Laptops for dev team" },
+      { "AcctCode": "2100", "AcctName": "Accounts Payable", "Debit": 0.00, "Credit": 12350.00, "LineMemo": "TechSupply Corp - PO-2026-0045" }
+    ]
+  },
+  {
+    "TransId": 1003,
+    "TransDate": "2026-03-03",
+    "Memo": "Client payment received - Acme Corp",
+    "Reference": "AR-2026-0112",
+    "CreatedBy": "slee",
+    "PostingTime": "14:00:00",
+    "Lines": [
+      { "AcctCode": "1100", "AcctName": "Cash - Operating Account", "Debit": 25000.00, "Credit": 0.00, "LineMemo": "Acme Corp - Invoice 0112" },
+      { "AcctCode": "1200", "AcctName": "Accounts Receivable", "Debit": 0.00, "Credit": 25000.00, "LineMemo": "Acme Corp - Invoice 0112" }
+    ]
+  },
+  {
+    "TransId": 1004,
+    "TransDate": "2026-03-05",
+    "Memo": "Consulting services payment",
+    "Reference": "AP-2026-0078",
+    "CreatedBy": "rgarcia",
+    "PostingTime": "02:17:00",
+    "_flags": ["SUSPICIOUS: Unusual posting time (2:17 AM)"],
+    "Lines": [
+      { "AcctCode": "6500", "AcctName": "Professional Services Expense", "Debit": 10000.00, "Credit": 0.00, "LineMemo": "Consulting - March retainer" },
+      { "AcctCode": "1100", "AcctName": "Cash - Operating Account", "Debit": 0.00, "Credit": 10000.00, "LineMemo": "GlobalEdge Consulting" }
+    ]
+  },
+  {
+    "TransId": 1005,
+    "TransDate": "2026-03-05",
+    "Memo": "Office supplies purchase",
+    "Reference": "AP-2026-0079",
+    "CreatedBy": "rgarcia",
+    "PostingTime": "02:23:00",
+    "_flags": ["SUSPICIOUS: Unusual posting time (2:23 AM)", "SUSPICIOUS: Round number amount"],
+    "Lines": [
+      { "AcctCode": "6200", "AcctName": "Office Supplies Expense", "Debit": 5000.00, "Credit": 0.00, "LineMemo": "Bulk office supplies order" },
+      { "AcctCode": "2100", "AcctName": "Accounts Payable", "Debit": 0.00, "Credit": 5000.00, "LineMemo": "OfficeMax Direct" }
+    ]
+  },
+  {
+    "TransId": 1006,
+    "TransDate": "2026-03-07",
+    "Memo": "Marketing campaign - Phase 1",
+    "Reference": "AP-2026-0082",
+    "CreatedBy": "jmartinez",
+    "PostingTime": "11:45:00",
+    "_flags": ["SUSPICIOUS: Split transaction - below $5,000 approval threshold (1 of 2)"],
+    "Lines": [
+      { "AcctCode": "6300", "AcctName": "Marketing Expense", "Debit": 4900.00, "Credit": 0.00, "LineMemo": "Digital marketing - Phase 1" },
+      { "AcctCode": "2100", "AcctName": "Accounts Payable", "Debit": 0.00, "Credit": 4900.00, "LineMemo": "BrightMedia Agency" }
+    ]
+  },
+  {
+    "TransId": 1007,
+    "TransDate": "2026-03-07",
+    "Memo": "Marketing campaign - Phase 2",
+    "Reference": "AP-2026-0083",
+    "CreatedBy": "jmartinez",
+    "PostingTime": "11:52:00",
+    "_flags": ["SUSPICIOUS: Split transaction - below $5,000 approval threshold (2 of 2)"],
+    "Lines": [
+      { "AcctCode": "6300", "AcctName": "Marketing Expense", "Debit": 4900.00, "Credit": 0.00, "LineMemo": "Digital marketing - Phase 2" },
+      { "AcctCode": "2100", "AcctName": "Accounts Payable", "Debit": 0.00, "Credit": 4900.00, "LineMemo": "BrightMedia Agency" }
+    ]
+  },
+  {
+    "TransId": 1008,
+    "TransDate": "2026-03-10",
+    "Memo": "Payroll - March 1-15",
+    "Reference": "PAY-2026-0006",
+    "CreatedBy": "slee",
+    "PostingTime": "08:00:00",
+    "Lines": [
+      { "AcctCode": "6400", "AcctName": "Salaries & Wages", "Debit": 67500.00, "Credit": 0.00, "LineMemo": "Bi-weekly payroll" },
+      { "AcctCode": "2200", "AcctName": "Payroll Tax Payable", "Debit": 0.00, "Credit": 10125.00, "LineMemo": "Withholding taxes" },
+      { "AcctCode": "1100", "AcctName": "Cash - Operating Account", "Debit": 0.00, "Credit": 57375.00, "LineMemo": "Net payroll disbursement" }
+    ]
+  },
+  {
+    "TransId": 1009,
+    "TransDate": "2026-03-11",
+    "Memo": "Utility bills - March",
+    "Reference": "AP-2026-0085",
+    "CreatedBy": "slee",
+    "PostingTime": "10:20:00",
+    "Lines": [
+      { "AcctCode": "6150", "AcctName": "Utilities Expense", "Debit": 3245.67, "Credit": 0.00, "LineMemo": "Electric + water + internet" },
+      { "AcctCode": "1100", "AcctName": "Cash - Operating Account", "Debit": 0.00, "Credit": 3245.67, "LineMemo": "Utility payment" }
+    ]
+  },
+  {
+    "TransId": 1010,
+    "TransDate": "2026-03-12",
+    "Memo": "Vendor payment - TechSupply Corp",
+    "Reference": "PAY-2026-0050",
+    "CreatedBy": "jmartinez",
+    "PostingTime": "15:30:00",
+    "Lines": [
+      { "AcctCode": "2100", "AcctName": "Accounts Payable", "Debit": 12350.00, "Credit": 0.00, "LineMemo": "TechSupply Corp - PO-2026-0045" },
+      { "AcctCode": "1100", "AcctName": "Cash - Operating Account", "Debit": 0.00, "Credit": 12350.00, "LineMemo": "TechSupply Corp payment" }
+    ]
+  },
+  {
+    "TransId": 1011,
+    "TransDate": "2026-03-14",
+    "Memo": "Insurance premium - Q1",
+    "Reference": "AP-2026-0088",
+    "CreatedBy": "slee",
+    "PostingTime": "09:45:00",
+    "Lines": [
+      { "AcctCode": "1600", "AcctName": "Prepaid Insurance", "Debit": 4500.00, "Credit": 0.00, "LineMemo": "Q1 2026 business insurance" },
+      { "AcctCode": "1100", "AcctName": "Cash - Operating Account", "Debit": 0.00, "Credit": 4500.00, "LineMemo": "SafeGuard Insurance Co." }
+    ]
+  },
+  {
+    "TransId": 1012,
+    "TransDate": "2026-03-15",
+    "Memo": "Payment to Apex Consulting Group",
+    "Reference": "PAY-2026-0055",
+    "CreatedBy": "rgarcia",
+    "PostingTime": "01:45:00",
+    "_flags": ["SUSPICIOUS: Ghost vendor payment", "SUSPICIOUS: Unusual posting time (1:45 AM)"],
+    "Lines": [
+      { "AcctCode": "6500", "AcctName": "Professional Services Expense", "Debit": 15000.00, "Credit": 0.00, "LineMemo": "Strategic advisory services" },
+      { "AcctCode": "1100", "AcctName": "Cash - Operating Account", "Debit": 0.00, "Credit": 15000.00, "LineMemo": "Apex Consulting Group" }
+    ]
+  },
+  {
+    "TransId": 1013,
+    "TransDate": "2026-03-17",
+    "Memo": "Revenue recognition - Project Alpha",
+    "Reference": "AR-2026-0120",
+    "CreatedBy": "slee",
+    "PostingTime": "16:00:00",
+    "Lines": [
+      { "AcctCode": "1200", "AcctName": "Accounts Receivable", "Debit": 45000.00, "Credit": 0.00, "LineMemo": "Project Alpha - Milestone 2" },
+      { "AcctCode": "4100", "AcctName": "Service Revenue", "Debit": 0.00, "Credit": 45000.00, "LineMemo": "Project Alpha - Milestone 2" }
+    ]
+  },
+  {
+    "TransId": 1014,
+    "TransDate": "2026-03-18",
+    "Memo": "Duplicate vendor payment - GlobalEdge",
+    "Reference": "PAY-2026-0058",
+    "CreatedBy": "rgarcia",
+    "PostingTime": "14:10:00",
+    "_flags": ["SUSPICIOUS: Duplicate payment - same vendor/amount as TransId 1004"],
+    "Lines": [
+      { "AcctCode": "6500", "AcctName": "Professional Services Expense", "Debit": 10000.00, "Credit": 0.00, "LineMemo": "Consulting - March retainer" },
+      { "AcctCode": "1100", "AcctName": "Cash - Operating Account", "Debit": 0.00, "Credit": 10000.00, "LineMemo": "GlobalEdge Consulting" }
+    ]
+  },
+  {
+    "TransId": 1015,
+    "TransDate": "2026-03-20",
+    "Memo": "Depreciation - March 2026",
+    "Reference": "GL-2026-0030",
+    "CreatedBy": "slee",
+    "PostingTime": "17:00:00",
+    "Lines": [
+      { "AcctCode": "6600", "AcctName": "Depreciation Expense", "Debit": 2750.00, "Credit": 0.00, "LineMemo": "Monthly depreciation - all assets" },
+      { "AcctCode": "1510", "AcctName": "Accumulated Depreciation", "Debit": 0.00, "Credit": 2750.00, "LineMemo": "Monthly depreciation - all assets" }
+    ]
+  },
+  {
+    "TransId": 1016,
+    "TransDate": "2026-03-22",
+    "Memo": "Travel reimbursement - R. Garcia",
+    "Reference": "EXP-2026-0014",
+    "CreatedBy": "rgarcia",
+    "PostingTime": "03:05:00",
+    "_flags": ["SUSPICIOUS: Unusual posting time (3:05 AM)", "SUSPICIOUS: Self-approved reimbursement"],
+    "Lines": [
+      { "AcctCode": "6700", "AcctName": "Travel & Entertainment", "Debit": 3200.00, "Credit": 0.00, "LineMemo": "Client site visit - Manila" },
+      { "AcctCode": "1100", "AcctName": "Cash - Operating Account", "Debit": 0.00, "Credit": 3200.00, "LineMemo": "Reimbursement - R. Garcia" }
+    ]
+  },
+  {
+    "TransId": 1017,
+    "TransDate": "2026-03-24",
+    "Memo": "Inventory purchase - raw materials",
+    "Reference": "PO-2026-0052",
+    "CreatedBy": "jmartinez",
+    "PostingTime": "13:30:00",
+    "Lines": [
+      { "AcctCode": "1400", "AcctName": "Inventory", "Debit": 18750.00, "Credit": 0.00, "LineMemo": "Raw materials - Production batch 26-03" },
+      { "AcctCode": "2100", "AcctName": "Accounts Payable", "Debit": 0.00, "Credit": 18750.00, "LineMemo": "Manila Materials Supply" }
+    ]
+  },
+  {
+    "TransId": 1018,
+    "TransDate": "2026-03-25",
+    "Memo": "Accrued expenses - March",
+    "Reference": "GL-2026-0035",
+    "CreatedBy": "slee",
+    "PostingTime": "16:45:00",
+    "Lines": [
+      { "AcctCode": "6800", "AcctName": "Miscellaneous Expense", "Debit": 6320.00, "Credit": 0.00, "LineMemo": "Month-end accruals" },
+      { "AcctCode": "2300", "AcctName": "Accrued Liabilities", "Debit": 0.00, "Credit": 6320.00, "LineMemo": "Month-end accruals" }
+    ]
+  }
+]

@@ -1,0 +1,111 @@
+[
+  {
+    "LogId": 9001,
+    "Timestamp": "2026-03-10T08:30:00Z",
+    "User": "rgarcia",
+    "Action": "CREATE",
+    "ObjectType": "BusinessPartner",
+    "ObjectKey": "V-1007",
+    "OldValue": null,
+    "NewValue": "Apex Consulting Group - New vendor created",
+    "_flags": ["SUSPICIOUS: New vendor created by user who also processed its payment"]
+  },
+  {
+    "LogId": 9002,
+    "Timestamp": "2026-03-14T22:15:00Z",
+    "User": "rgarcia",
+    "Action": "UPDATE",
+    "ObjectType": "BusinessPartner",
+    "ObjectKey": "V-1007",
+    "OldValue": "BankAccount: BPI-0011223344",
+    "NewValue": "BankAccount: BPI-0099887766",
+    "_flags": ["SUSPICIOUS: Vendor bank account changed 1 day before $15,000 payment, at 10:15 PM"]
+  },
+  {
+    "LogId": 9003,
+    "Timestamp": "2026-03-15T01:45:00Z",
+    "User": "rgarcia",
+    "Action": "CREATE",
+    "ObjectType": "Payment",
+    "ObjectKey": "PAY-2026-0055",
+    "OldValue": null,
+    "NewValue": "Payment of $15,000.00 to V-1007 (Apex Consulting Group)",
+    "_flags": ["SUSPICIOUS: Payment created at 1:45 AM, day after bank account change"]
+  },
+  {
+    "LogId": 9004,
+    "Timestamp": "2026-03-05T02:17:00Z",
+    "User": "rgarcia",
+    "Action": "CREATE",
+    "ObjectType": "JournalEntry",
+    "ObjectKey": "1004",
+    "OldValue": null,
+    "NewValue": "Journal entry $10,000.00 - Professional Services Expense",
+    "_flags": ["SUSPICIOUS: Journal entry created at 2:17 AM"]
+  },
+  {
+    "LogId": 9005,
+    "Timestamp": "2026-03-18T14:10:00Z",
+    "User": "rgarcia",
+    "Action": "CREATE",
+    "ObjectType": "Payment",
+    "ObjectKey": "PAY-2026-0058",
+    "OldValue": null,
+    "NewValue": "Payment of $10,000.00 to V-1002 (GlobalEdge Consulting)",
+    "_flags": ["SUSPICIOUS: Duplicate payment - same vendor and amount as PAY-2026-0048"]
+  },
+  {
+    "LogId": 9006,
+    "Timestamp": "2026-03-07T11:45:00Z",
+    "User": "jmartinez",
+    "Action": "CREATE",
+    "ObjectType": "JournalEntry",
+    "ObjectKey": "1006",
+    "OldValue": null,
+    "NewValue": "Journal entry $4,900.00 - Marketing Expense (Phase 1)"
+  },
+  {
+    "LogId": 9007,
+    "Timestamp": "2026-03-07T11:52:00Z",
+    "User": "jmartinez",
+    "Action": "CREATE",
+    "ObjectType": "JournalEntry",
+    "ObjectKey": "1007",
+    "OldValue": null,
+    "NewValue": "Journal entry $4,900.00 - Marketing Expense (Phase 2)",
+    "_flags": ["SUSPICIOUS: Second $4,900 entry created 7 minutes after first - possible split to avoid $5,000 threshold"]
+  },
+  {
+    "LogId": 9008,
+    "Timestamp": "2026-03-14T09:00:00Z",
+    "User": "jmartinez",
+    "Action": "CREATE",
+    "ObjectType": "Payment",
+    "ObjectKey": "PAY-2026-0064",
+    "OldValue": null,
+    "NewValue": "Payment of $12,350.00 to V-1001 (TechSupply Corp)",
+    "_flags": ["SUSPICIOUS: Duplicate payment - same vendor and amount as PAY-2026-0045, 2 days apart"]
+  },
+  {
+    "LogId": 9009,
+    "Timestamp": "2026-03-22T03:05:00Z",
+    "User": "rgarcia",
+    "Action": "CREATE",
+    "ObjectType": "JournalEntry",
+    "ObjectKey": "1016",
+    "OldValue": null,
+    "NewValue": "Journal entry $3,200.00 - Travel & Entertainment reimbursement",
+    "_flags": ["SUSPICIOUS: Self-approved reimbursement at 3:05 AM"]
+  },
+  {
+    "LogId": 9010,
+    "Timestamp": "2026-03-25T16:30:00Z",
+    "User": "slee",
+    "Action": "UPDATE",
+    "ObjectType": "GLAccount",
+    "ObjectKey": "6500",
+    "OldValue": "Balance: $25,000.00",
+    "NewValue": "Balance: $35,000.00 - Month-end adjustment",
+    "_flags": ["NOTE: Large balance adjustment during month-end close"]
+  }
+]

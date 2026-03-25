@@ -1,0 +1,111 @@
+[
+  {
+    "CardCode": "V-1001",
+    "CardName": "TechSupply Corp",
+    "Address": "Unit 12, BGC Corporate Center, Taguig, Metro Manila",
+    "TaxId": "123-456-789-000",
+    "Currency": "PHP",
+    "CreateDate": "2024-06-15",
+    "LastPurchaseDate": "2026-03-02",
+    "ContactPerson": "Maria Santos",
+    "Phone": "+63-2-8888-1001",
+    "BankAccount": "BDO-0012345678"
+  },
+  {
+    "CardCode": "V-1002",
+    "CardName": "GlobalEdge Consulting",
+    "Address": "18F Ayala Tower, Makati, Metro Manila",
+    "TaxId": "234-567-890-000",
+    "Currency": "PHP",
+    "CreateDate": "2023-01-20",
+    "LastPurchaseDate": "2026-03-18",
+    "ContactPerson": "Carlos Reyes",
+    "Phone": "+63-2-8888-1002",
+    "BankAccount": "BPI-0098765432"
+  },
+  {
+    "CardCode": "V-1003",
+    "CardName": "BrightMedia Agency",
+    "Address": "5F Ortigas Park Tower, Pasig, Metro Manila",
+    "TaxId": "345-678-901-000",
+    "Currency": "PHP",
+    "CreateDate": "2025-02-10",
+    "LastPurchaseDate": "2026-03-07",
+    "ContactPerson": "Ana Cruz",
+    "Phone": "+63-2-8888-1003",
+    "BankAccount": "MBT-0055667788"
+  },
+  {
+    "CardCode": "V-1004",
+    "CardName": "SafeGuard Insurance Co.",
+    "Address": "3F Insular Life Building, Alabang, Muntinlupa",
+    "TaxId": "456-789-012-000",
+    "Currency": "PHP",
+    "CreateDate": "2022-11-05",
+    "LastPurchaseDate": "2026-03-14",
+    "ContactPerson": "Ramon Tan",
+    "Phone": "+63-2-8888-1004",
+    "BankAccount": "BDO-0044332211"
+  },
+  {
+    "CardCode": "V-1005",
+    "CardName": "Manila Materials Supply",
+    "Address": "Warehouse 7, North Harbor Industrial Zone, Manila",
+    "TaxId": "567-890-123-000",
+    "Currency": "PHP",
+    "CreateDate": "2023-08-22",
+    "LastPurchaseDate": "2026-03-24",
+    "ContactPerson": "Eduardo Lim",
+    "Phone": "+63-2-8888-1005",
+    "BankAccount": "LBP-0077889900"
+  },
+  {
+    "CardCode": "V-1006",
+    "CardName": "OfficeMax Direct",
+    "Address": "2F SM Aura Premier, Taguig, Metro Manila",
+    "TaxId": "678-901-234-000",
+    "Currency": "PHP",
+    "CreateDate": "2024-03-01",
+    "LastPurchaseDate": "2026-03-05",
+    "ContactPerson": "Grace Villanueva",
+    "Phone": "+63-2-8888-1006",
+    "BankAccount": "PNB-0011223344"
+  },
+  {
+    "CardCode": "V-1007",
+    "CardName": "Apex Consulting Group",
+    "Address": "Unit 501, Pacific Star Building, Makati, Metro Manila",
+    "TaxId": "789-012-345-000",
+    "Currency": "PHP",
+    "CreateDate": "2026-03-10",
+    "LastPurchaseDate": null,
+    "ContactPerson": "Ricardo Garcia",
+    "Phone": "+63-917-555-0199",
+    "BankAccount": "BPI-0099887766",
+    "_flags": ["SUSPICIOUS: Ghost vendor - created 2026-03-10, no purchase orders, no PO history, received payment on 2026-03-15"]
+  },
+  {
+    "CardCode": "V-1008",
+    "CardName": "Cebu Power Utilities",
+    "Address": "Gov. Cuenco Ave, Cebu City, Cebu",
+    "TaxId": "890-123-456-000",
+    "Currency": "PHP",
+    "CreateDate": "2022-05-18",
+    "LastPurchaseDate": "2026-03-11",
+    "ContactPerson": "Utility Billing Dept",
+    "Phone": "+63-32-888-1008",
+    "BankAccount": "RCBC-0033445566"
+  },
+  {
+    "CardCode": "V-1009",
+    "CardName": "Pacific Logistics Inc.",
+    "Address": "PEZA Compound, Clark Freeport Zone, Pampanga",
+    "TaxId": "901-234-567-000",
+    "Currency": "PHP",
+    "CreateDate": "2024-09-12",
+    "LastPurchaseDate": "2026-02-28",
+    "ContactPerson": "Dante Navarro",
+    "Phone": "+63-45-888-1009",
+    "BankAccount": "UBP-0066778899"
+  }
+]

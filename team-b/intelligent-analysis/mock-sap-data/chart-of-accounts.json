@@ -1,0 +1,152 @@
+[
+  {
+    "AcctCode": "1100",
+    "AcctName": "Cash - Operating Account",
+    "Category": "Asset",
+    "Balance": 142580.33,
+    "PriorPeriodBalance": 195000.00
+  },
+  {
+    "AcctCode": "1200",
+    "AcctName": "Accounts Receivable",
+    "Category": "Asset",
+    "Balance": 78500.00,
+    "PriorPeriodBalance": 58500.00
+  },
+  {
+    "AcctCode": "1400",
+    "AcctName": "Inventory",
+    "Category": "Asset",
+    "Balance": 45250.00,
+    "PriorPeriodBalance": 26500.00
+  },
+  {
+    "AcctCode": "1500",
+    "AcctName": "Fixed Assets - Equipment",
+    "Category": "Asset",
+    "Balance": 87350.00,
+    "PriorPeriodBalance": 75000.00
+  },
+  {
+    "AcctCode": "1510",
+    "AcctName": "Accumulated Depreciation",
+    "Category": "Asset",
+    "Balance": -22750.00,
+    "PriorPeriodBalance": -20000.00
+  },
+  {
+    "AcctCode": "1600",
+    "AcctName": "Prepaid Insurance",
+    "Category": "Asset",
+    "Balance": 4500.00,
+    "PriorPeriodBalance": 0.00
+  },
+  {
+    "AcctCode": "2100",
+    "AcctName": "Accounts Payable",
+    "Category": "Liability",
+    "Balance": 31970.00,
+    "PriorPeriodBalance": 22400.00,
+    "_flags": ["MISMATCH: Balance does not reconcile with vendor sub-ledger total of $28,650.00 - difference of $3,320.00"]
+  },
+  {
+    "AcctCode": "2200",
+    "AcctName": "Payroll Tax Payable",
+    "Category": "Liability",
+    "Balance": 10125.00,
+    "PriorPeriodBalance": 9800.00
+  },
+  {
+    "AcctCode": "2300",
+    "AcctName": "Accrued Liabilities",
+    "Category": "Liability",
+    "Balance": 6320.00,
+    "PriorPeriodBalance": 4100.00
+  },
+  {
+    "AcctCode": "3100",
+    "AcctName": "Retained Earnings",
+    "Category": "Equity",
+    "Balance": 180000.00,
+    "PriorPeriodBalance": 180000.00
+  },
+  {
+    "AcctCode": "3200",
+    "AcctName": "Common Stock",
+    "Category": "Equity",
+    "Balance": 50000.00,
+    "PriorPeriodBalance": 50000.00
+  },
+  {
+    "AcctCode": "4100",
+    "AcctName": "Service Revenue",
+    "Category": "Revenue",
+    "Balance": 145000.00,
+    "PriorPeriodBalance": 132000.00
+  },
+  {
+    "AcctCode": "6100",
+    "AcctName": "Rent Expense",
+    "Category": "Expense",
+    "Balance": 8500.00,
+    "PriorPeriodBalance": 8500.00
+  },
+  {
+    "AcctCode": "6150",
+    "AcctName": "Utilities Expense",
+    "Category": "Expense",
+    "Balance": 3245.67,
+    "PriorPeriodBalance": 2980.00
+  },
+  {
+    "AcctCode": "6200",
+    "AcctName": "Office Supplies Expense",
+    "Category": "Expense",
+    "Balance": 5000.00,
+    "PriorPeriodBalance": 2150.00,
+    "_flags": ["MISMATCH: Unusual 132% increase from prior period - review required"]
+  },
+  {
+    "AcctCode": "6300",
+    "AcctName": "Marketing Expense",
+    "Category": "Expense",
+    "Balance": 9800.00,
+    "PriorPeriodBalance": 6200.00
+  },
+  {
+    "AcctCode": "6400",
+    "AcctName": "Salaries & Wages",
+    "Category": "Expense",
+    "Balance": 67500.00,
+    "PriorPeriodBalance": 65000.00
+  },
+  {
+    "AcctCode": "6500",
+    "AcctName": "Professional Services Expense",
+    "Category": "Expense",
+    "Balance": 35000.00,
+    "PriorPeriodBalance": 12000.00,
+    "_flags": ["MISMATCH: 192% increase from prior period - includes duplicate payment and ghost vendor payment"]
+  },
+  {
+    "AcctCode": "6600",
+    "AcctName": "Depreciation Expense",
+    "Category": "Expense",
+    "Balance": 2750.00,
+    "PriorPeriodBalance": 2750.00
+  },
+  {
+    "AcctCode": "6700",
+    "AcctName": "Travel & Entertainment",
+    "Category": "Expense",
+    "Balance": 3200.00,
+    "PriorPeriodBalance": 1800.00
+  },
+  {
+    "AcctCode": "6800",
+    "AcctName": "Miscellaneous Expense",
+    "Category": "Expense",
+    "Balance": 6320.00,
+    "PriorPeriodBalance": 3500.00
+  }
+]

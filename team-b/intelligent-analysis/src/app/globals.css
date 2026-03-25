@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply h-full;
+  }
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased dark:bg-gray-950 dark:text-gray-100;
+  }
+}
+
+@media print {
+  /* Hide sidebar and top bar */
+  aside,
+  header,
+  nav {
+    display: none !important;
+  }
+
+  /* Remove layout offsets so content fills the page */
+  .ml-56 {
+    margin-left: 0 !important;
+  }
+  .mt-14 {
+    margin-top: 0 !important;
+  }
+
+  /* Full width, no padding waste */
+  main {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* Force white background for clean PDF output */
+  body,
+  html {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Hide any element marked print:hidden */
+  .print\:hidden {
+    display: none !important;
+  }
+}

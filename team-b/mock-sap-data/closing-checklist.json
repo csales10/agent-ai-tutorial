@@ -1,0 +1,82 @@
+[
+  {
+    "TaskId": "CL-001",
+    "Name": "GL Trial Balance Reconciliation",
+    "Category": "Reconciliation",
+    "Status": "failed",
+    "AutoCheck": true,
+    "Description": "Verify that total debits equal total credits across all GL accounts. Current imbalance detected: $3,320.00 variance in Accounts Payable (2100) vs. vendor sub-ledger."
+  },
+  {
+    "TaskId": "CL-002",
+    "Name": "Bank Reconciliation",
+    "Category": "Reconciliation",
+    "Status": "passed",
+    "AutoCheck": true,
+    "Description": "Match bank statement transactions against Cash - Operating Account (1100). All items reconciled."
+  },
+  {
+    "TaskId": "CL-003",
+    "Name": "Accounts Receivable Aging Review",
+    "Category": "Review",
+    "Status": "passed",
+    "AutoCheck": true,
+    "Description": "Review AR aging buckets (Current, 30, 60, 90+ days). No items over 90 days. Total AR: $78,500.00."
+  },
+  {
+    "TaskId": "CL-004",
+    "Name": "Accounts Payable Sub-Ledger Match",
+    "Category": "Reconciliation",
+    "Status": "failed",
+    "AutoCheck": true,
+    "Description": "AP control account (2100) balance of $31,970.00 does not match vendor sub-ledger total of $28,650.00. Variance: $3,320.00 — likely caused by duplicate payment entries not cleared."
+  },
+  {
+    "TaskId": "CL-005",
+    "Name": "Duplicate Payment Detection",
+    "Category": "Review",
+    "Status": "failed",
+    "AutoCheck": true,
+    "Description": "Automated scan found 2 duplicate payment sets: (1) GlobalEdge Consulting $10,000 on 03/05 and 03/18, (2) TechSupply Corp $12,350 on 03/12 and 03/14. Total duplicate exposure: $22,350.00."
+  },
+  {
+    "TaskId": "CL-006",
+    "Name": "Unusual Transaction Review",
+    "Category": "Review",
+    "Status": "failed",
+    "AutoCheck": true,
+    "Description": "4 transactions flagged for unusual posting times (between 1:00 AM and 3:30 AM). All posted by user 'rgarcia'. Requires management review."
+  },
+  {
+    "TaskId": "CL-007",
+    "Name": "Depreciation Posting Verification",
+    "Category": "Reconciliation",
+    "Status": "passed",
+    "AutoCheck": true,
+    "Description": "Monthly depreciation of $2,750.00 posted correctly. Accumulated Depreciation (1510) balance updated. Consistent with prior period."
+  },
+  {
+    "TaskId": "CL-008",
+    "Name": "Revenue Recognition Review",
+    "Category": "Review",
+    "Status": "passed",
+    "AutoCheck": false,
+    "Description": "Revenue entries reviewed for proper period allocation. Project Alpha milestone recognized per contract terms. No deferred revenue adjustments needed."
+  },
+  {
+    "TaskId": "CL-009",
+    "Name": "Accrued Expenses Verification",
+    "Category": "Reconciliation",
+    "Status": "pending",
+    "AutoCheck": false,
+    "Description": "Verify all March accruals are recorded. Accrued Liabilities (2300) shows $6,320.00. Awaiting confirmation from department heads on completeness."
+  },
+  {
+    "TaskId": "CL-010",
+    "Name": "Financial Statement Package Generation",
+    "Category": "Reporting",
+    "Status": "pending",
+    "AutoCheck": false,
+    "Description": "Generate Balance Sheet, Income Statement, and Cash Flow Statement for March 2026. Cannot proceed until CL-001 and CL-004 reconciliation issues are resolved."
+  }
+]

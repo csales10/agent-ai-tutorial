@@ -1,0 +1,6 @@
+{
+  "/fraud/page": "app/fraud/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/api/sap/[entity]/route": "app/api/sap/[entity]/route.js",
+  "/month-end/page": "app/month-end/page.js"
+}

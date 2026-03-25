@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Counter</title>
+  <style>
+    :root {
+      --bg: #f1f5f9;
+      --card: #ffffff;
+      --text: #1e293b;
+      --accent: #2563eb;
+      --accent-dark: #1d4ed8;
+      --danger: #dc2626;
+      --radius: 14px;
+      --shadow: 0 10px 20px rgba(15, 23, 42, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at top, #e0f2fe 0%, var(--bg) 65%);
+      color: var(--text);
+      font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif;
+    }
+
+    .card {
+      width: min(360px, 90vw);
+      padding: 2rem;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+      border: 1px solid rgba(100, 116, 139, 0.16);
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      letter-spacing: 0.03em;
+      color: #0f172a;
+    }
+
+    .value {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin: 1rem 0 1.5rem;
+      color: #0b1133;
+      transition: transform 0.2s ease;
+      display: inline-block;
+      min-width: 5ch;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    button {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      border: none;
+      font-size: 2rem;
+      font-weight: 700;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+      box-shadow: 0 6px 12px rgba(15, 23, 42, 0.22);
+    }
+
+    button:active {
+      transform: translateY(2px) scale(0.98);
+      box-shadow: 0 4px 8px rgba(15, 23, 42, 0.24);
+    }
+
+    button.increment {
+      background: linear-gradient(145deg, var(--accent), var(--accent-dark));
+    }
+
+    button.decrement {
+      background: linear-gradient(145deg, #ef4444, var(--danger));
+    }
+
+    button.reset {
+      background: linear-gradient(145deg, #0ea5e9, #0284c7);
+      width: auto;
+      min-width: 72px;
+      padding: 0 1rem;
+      border-radius: 999px;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .dark-mode-btn {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: #64748b;
+      color: #fff;
+      border-radius: 999px;
+      padding: 0.6rem 1.2rem;
+      min-width: 108px;
+      width: auto;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.15s ease;
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.2);
+      z-index: 100;
+    }
+
+    .dark-mode-btn:active {
+      transform: scale(0.98);
+    }
+
+    .dark-mode-btn:hover {
+      background: #475569;
+    }
+
+    body.dark-mode {
+      background: radial-gradient(circle at top, #111827 0%, #0f172a 65%);
+      color: #e2e8f0;
+    }
+
+    body.dark-mode .card {
+      background: #1f2937;
+      border-color: rgba(148, 163, 184, 0.35);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    body.dark-mode h1,
+    body.dark-mode .value,
+    body.dark-mode .dark-mode-btn {
+      color: #f8fafc !important;
+    }
+
+    body.dark-mode .value {
+      color: #f8fafc !important;
+      text-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+
+    body.dark-mode .card {
+      background: #1f2937;
+      border-color: rgba(148, 163, 184, 0.35);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    body.dark-mode button.increment,
+    body.dark-mode button.decrement,
+    body.dark-mode button.reset {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.45);
+    }
+
+    @media (max-width: 420px) {
+      .value {
+        font-size: 2.5rem;
+      }
+
+      button {
+        width: 64px;
+        height: 64px;
+        font-size: 1.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="dark-mode-btn" id="toggleDarkModeBtn" aria-label="Toggle dark mode">Dark Mode</button>
+
+  <div class="card">
+    <h1>Simple Counter</h1>
+    <div class="value" id="counterValue">0</div>
+    <div class="controls">
+      <button class="decrement" id="decrementBtn" aria-label="Decrease">-</button>
+      <button class="increment" id="incrementBtn" aria-label="Increase">+</button>
+      <button class="reset" id="resetBtn" aria-label="Reset">↺</button>
+    </div>
+  </div>
+
+  <script>
+    const counterValue = document.getElementById('counterValue');
+    const incrementBtn = document.getElementById('incrementBtn');
+    const decrementBtn = document.getElementById('decrementBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const toggleDarkModeBtn = document.getElementById('toggleDarkModeBtn');
+
+    let count = 0;
+    let isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+    function updateDisplay() {
+      counterValue.textContent = count;
+      counterValue.style.transform = 'scale(1.05)';
+      setTimeout(() => {
+        counterValue.style.transform = 'scale(1)';
+      }, 120);
+    }
+
+    incrementBtn.addEventListener('click', () => {
+      count += 1;
+      updateDisplay();
+    });
+
+    decrementBtn.addEventListener('click', () => {
+      count -= 1;
+      updateDisplay();
+    });
+
+    resetBtn.addEventListener('click', () => {
+      count = 0;
+      updateDisplay();
+    });
+
+    if (!toggleDarkModeBtn || !resetBtn || !incrementBtn || !decrementBtn || !counterValue) {
+      console.error('Missing expected UI elements.');
+    } else {
+      toggleDarkModeBtn.addEventListener('click', () => {
+        isDarkMode = !isDarkMode;
+        setDarkMode(isDarkMode);
+      });
+
+      resetBtn.addEventListener('click', () => {
+        count = 0;
+        updateDisplay();
+      });
+
+      incrementBtn.addEventListener('click', () => {
+        count += 1;
+        updateDisplay();
+      });
+
+      decrementBtn.addEventListener('click', () => {
+        count -= 1;
+        updateDisplay();
+      });
+
+      function setDarkMode(enabled) {
+        if (enabled) {
+          document.body.classList.add('dark-mode');
+          toggleDarkModeBtn.textContent = 'Light Mode';
+          toggleDarkModeBtn.setAttribute('aria-pressed', 'true');
+        } else {
+          document.body.classList.remove('dark-mode');
+          toggleDarkModeBtn.textContent = 'Dark Mode';
+          toggleDarkModeBtn.setAttribute('aria-pressed', 'false');
+        }
+        localStorage.setItem('darkMode', enabled ? 'true' : 'false');
+      }
+
+      // initialize dark mode at load
+      setDarkMode(isDarkMode);
+    }
+  </script>
+</body>
+</html>
